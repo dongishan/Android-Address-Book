@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gishan.addressbook" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <!--Permission to read contacts in the device!-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--Permission to make a phone call!-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--Permission store camera pictures-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ContactsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateContactActivity"
+            android:label="@string/title_activity_create_contact" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+        <provider
+            android:permission="android.permission.READ_CONTACTS"
+            android:authorities="com.gishan.addressbook.contentprovider.ABContentProvider"
+            android:multiprocess="true"
+            android:name="com.gishan.addressbook.contentprovider.ABContentProvider">
+        </provider>
+    </application>
+
+</manifest>
