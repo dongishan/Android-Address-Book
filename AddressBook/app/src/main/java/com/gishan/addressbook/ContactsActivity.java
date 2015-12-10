@@ -96,8 +96,8 @@ public class ContactsActivity extends ActionBarActivity
         boolean dummyAdded = prefs.getBoolean(Constants.DUMMY_ADDED, false);
         if(!dummyAdded) {
             ContentValues values = new ContentValues();
-            values.put(ABProviderContract.NAME, "Gishan Don Ranasinghe");
-            values.put(ABProviderContract.MOBILE_NUMBER, "07466541444");
+            values.put(ABProviderContract.NAME, "Gishan");
+            values.put(ABProviderContract.MOBILE_NUMBER, "08066541444");
             values.put(ABProviderContract.HOME_NUMBER, "0155223223");
             values.put(ABProviderContract.WORK_NUMBER, "0802232788");
             values.put(ABProviderContract.EMAIL_ADDRESS, "gishan@gmail.com");
